@@ -2,11 +2,17 @@
 
 int N = new Random().Next(1, 100);
 Console.WriteLine($"Ввод числа N = {N}");
-string result = NumRec (N);
+string result = NumberRecursive (N);
 Console.WriteLine($"Все числа от N до 1: {result}");
 
-string NumRec(int N)
+string NumberRecursive(int N)
 {
-    if (N == 1) return "1";
-    else return N + "," + NumRec(N-1);
+    if (N == 1) 
+    {
+        return "1";
+    }
+    else 
+    {
+        return N + "," + NumberRecursive(N-1);
+    }
 }
